@@ -1,0 +1,86 @@
+---
+layout: new
+title: New Post
+---
+
+<div>
+  
+  <!-- Input/Preview Post -->
+  <div class="wrapper row">
+    <div class="col-md-6">
+
+      <!-- Post interface -->
+      <form name="postForm">
+        <div class="form-group title">
+          <label for="postTitle">Title</label>
+          <input name="postTitle" ng-model="postTitle" class="form-control" id="postTitle" type="text">
+        </div>
+        <div class="form-group body">
+          <label for="postContent">Body</label>
+          <textarea name="value" ng-model="postContent" class="form-control large-12" id="postContent" rows="20"></textarea>
+        </div>
+      </form>
+
+      <form class="form-inline" role="form">
+        <div class="well well-sm">
+          <div class="form-group category">
+            <label for="postCategory">Category</label>&nbsp;
+            <select name="postCategory" id="postCategory" ng-model="postCategory">
+              <option value="blog" selected>blog</option>
+              <option value="poem">poem</option>
+              <option value="story">story</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="well well-sm">
+          <div class="radio publish">
+            <label>
+              <input type="radio" name="postPublish" value="true" ng-model="postPublish">
+              Publish this now
+            </label>
+          </div>
+          <div class="radio publish">
+            <label>
+              <input type="radio" name="postPublish" value="false" ng-model="postPublish" checked> 
+              Publish this later
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" placeholder="username" class="form-control" ng-model="username" required>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="password" class="form-control" ng-model="password" required>
+        </div>
+
+        <button ng-click="auth()" type="submit" class="btn btn-success pull-right">Submit</button>
+      </form>
+        
+    </div> 
+
+    <!-- Preview -->
+    <div class="col-md-6">
+      <h1 id="markdown-preview-title" class=" preview-title" ng-bind="postTitle"></h1>
+      <div id="markdown-preview-body" class="well preview-body" ng-bind-html-unsafe="postContent|convert"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/marked.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/base64.js"></script>
+<script src="js/github.js"></script>
+<script src="js/githubpost.js"></script>
+<script src="js/jquery.autosize.js"></script>
+<script>
+  $(document).ready(function(){
+    $('textarea').autosize();   
+  });
+</script>
