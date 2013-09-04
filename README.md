@@ -1,6 +1,9 @@
+
 # hublog-ng
 _Jekyll-based blogging on GitHub with an AngularJS app._
 http://jeradbitner.com/2013/08/angularjs-posting-interface-for-your-github-jekyll-site/
+
+Note: this is still a work in progress and will not work as instructed yet.
 
 ## Installation
 1. Install Jekyll
