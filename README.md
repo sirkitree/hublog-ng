@@ -34,6 +34,6 @@ Note: this is still a work in progress and will not work as instructed yet.
 
 5. *optional* : The new.html from hublog-ng has classes for bootstrap to make it looks nicer than the default css that comes with jekyll. It is recommended to add in bootstrap to the top of your new.html inside of `_layouts`.
 ```html
-        <!-- bootstrap cdn -->
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<!-- bootstrap cdn -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 ```
