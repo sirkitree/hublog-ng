@@ -26,8 +26,15 @@ Note: this is still a work in progress and will not work as instructed yet.
 
 
 3. Copy your default layout (_layouts/default.html) to new.html
- * `~ $ cp ~/my-awesome-site/_layouts/default.html ~/my-awesome-site/_layouts/new.html 
+ * `~ $ cp ~/my-awesome-site/_layouts/default.html ~/my-awesome-site/_layouts/new.html`
 
 
 4. Edit your new.html layout and add in the following directives to the body tag:
  * `data-ng-app="app" data-ng-controller="AuthCtrl"`
+
+
+5. *optional* : The new.html from hublog-ng has classes for bootstrap to make it looks nicer than the default css that comes with jekyll. It is recommended to add in bootstrap to the top of your new.html inside of `_layouts`.
+ * ```html
+        <!-- bootstrap cdn -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+   ```
