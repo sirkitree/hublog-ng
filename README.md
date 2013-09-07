@@ -13,7 +13,7 @@ Note: this is still a work in progress and will not work as instructed yet.
 2. Grab the AngularJS app to control your site
  * `~/my-awesome-site $ git clone git@github.com:sirkitree/hublog-ng.git hublog-ng`
 
- This should give you just a couple new files:
+ This should give you the follwoing new files:
  * `~/my-awesome-site/hublog-ng/new.html` - this is the app for creating new posts
  * `~/my-awesome-site/hublog-ng/js/base64.js` - required by github.js
  * `~/my-awesome-site/hublog-ng/js/filters.js` - required by github.js
