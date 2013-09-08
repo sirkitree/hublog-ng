@@ -2,7 +2,7 @@
 
 var app = angular.module('app', ['app.filters', 'pascalprecht.github-adapter']);
 
-app.controller('AuthCtrl', function($scope, $log, $githubProvider) {
+app.controller('AuthCtrl', function($scope, $log, $github) {
   $scope.username = '';
   $scope.password = '';
   $scope.success = false;
@@ -10,9 +10,9 @@ app.controller('AuthCtrl', function($scope, $log, $githubProvider) {
   $scope.postPublish = "false";
   $scope.auth = function() {
     
-    $githubProvider.username = $scope.username;
-    $githubProvider.password = $scope.password;
-    $githubProvider.auth = "basic";
+    $github.username = $scope.username;
+    $github.password = $scope.password;
+    $github.auth = "basic";
 
     var path = '_posts/' + determineFilename($scope);
     var content = "---\n"
@@ -27,7 +27,7 @@ app.controller('AuthCtrl', function($scope, $log, $githubProvider) {
 
     var commitmsg = ":skull: new post for " + determineDate('dt');
 
-    var repo = $githubProvider.getRepo($scope.username, 'sirkitree.github.com');
+    var repo = $github.getRepo($scope.username, 'sirkitree.github.com');
     repo.write('master', path, content, commitmsg, function (err) {
       if (err !== null) {
         $log.log(err);
