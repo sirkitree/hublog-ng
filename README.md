@@ -51,4 +51,5 @@ http://jeradbitner.com/2013/08/angularjs-posting-interface-for-your-github-jekyl
  * `~/my-awesome-site $ git remote add origin git@github.com:[your-username]/[your-repository].git`
  * `~/my-awesome-site $ git push -u origin gh-pages`
 
- This will get your files to GitHub but unless you're repository is named [username].github.com you'll have to follow a few more steps to [create a site manually](https://help.github.com/articles/creating-project-pages-manually).
+
+That's it. Now you just customize your Jekkyl site as you normally might.
