@@ -25,8 +25,8 @@ app.controller('AuthCtrl', function ($scope, $log, $github) {
     // Since these are not promises, we do our 'write' operation inside of 'then'
     $github.getRepo($scope.username, $scope.repository).then(function (repo) {
       
-      repo.write('master', path, content, commitmsg);
-      var url = "https://github.com/" + $scope.username + "/" + $scope.repository + "/blob/master/" + path;
+      repo.write($scope.branch, path, content, commitmsg);
+      var url = "https://github.com/" + $scope.username + "/" + $scope.repository + "/blob/" + $scope.branch + "/" + path;
       $scope.messages = "View your post <a href=\"" + url + "\">here</a>.";
     });
   };
