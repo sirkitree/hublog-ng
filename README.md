@@ -21,6 +21,7 @@ Note: this is still a work in progress and will not work as instructed yet.
  As well as some components from bower:
  * `angular` - angularjs library
  * `angular-github-adapter` - PascalPrecht's Angular adapter module for github.js
+ * `github` - library for github integration, utilized by the adapter module
  * `jquery` - jquery library
  * `jquery-autosize` - jquery autosize library for expanding the textarea as you type
  * `marked` - for realtime markdown conversion (used as an Angular filter)
