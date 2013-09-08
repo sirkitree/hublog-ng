@@ -2,17 +2,12 @@
 
 var app = angular.module('app', ['app.filters', 'pascalprecht.github-adapter']);
 
-app.controller('AuthCtrl', function($scope, $log, $github) {
-  $scope.username = '';
-  $scope.password = '';
-  $scope.success = false;
-  $scope.postCategory = "blog";
+app.controller('AuthCtrl', function ($scope, $log, $github) {
+  $scope.postCategory = "blog";;
   $scope.postPublish = "false";
-  $scope.auth = function() {
-    
-    $github.username = $scope.username;
-    $github.password = $scope.password;
-    $github.auth = "basic";
+  $scope.auth = function () {
+
+    $github.setCreds($scope.username, $scope.password, 'basic');
 
     var path = '_posts/' + determineFilename($scope);
     var content = "---\n"
