@@ -22,13 +22,13 @@ app.controller('AuthCtrl', function ($scope, $log, $github) {
 
     var commitmsg = ":skull: new post for " + determineDate('dt');
 
-    var repo = $github.getRepo($scope.username, 'sirkitree.github.com');
+    var repo = $github.getRepo($scope.username, $scope.repository);
     repo.write('master', path, content, commitmsg, function (err) {
       if (err !== null) {
         $log.log(err);
       } else {
         // go to the new blog page
-        $scope.url = "https://github.com/sirkitree/sirkitree.github.com/blob/master/" + path;
+        $scope.url = "https://github.com/" + $scope.username + "/" + $scope.repository + "/blob/master/" + path;
         window.location = $scope.url;
       }
     });

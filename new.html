@@ -49,12 +49,14 @@ title: New Post
         </div>
 
         <div class="form-group">
+          <input type="text" placeholder="repository (ex: sirkitree.github.com)" class="form-control" ng-model="repository" required>
+        </div>
+        <div class="form-group">
           <input type="text" placeholder="username" class="form-control" ng-model="username" required>
         </div>
         <div class="form-group">
           <input type="password" placeholder="password" class="form-control" ng-model="password" required>
         </div>
-
         <button ng-click="auth()" type="submit" class="btn btn-success pull-right">Submit</button>
       </form>
         
